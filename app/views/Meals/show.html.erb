@@ -1,0 +1,18 @@
+<h1><%= @meal.name %></h1>
+
+<% @meal.recipes.each do |recipe| %>
+  <h3>Name: <%= recipe.name %>
+  <br>
+  Key Ingrediants: <%= recipe.key_ingrediant %></h3>
+
+  <%= link_to "See #{recipe.name.pluralize} details", recipe_path(recipe), class: "btn" %>
+
+  
+ 
+
+
+<% end %>
+
+
+
+

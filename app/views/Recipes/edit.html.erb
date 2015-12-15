@@ -1,0 +1,19 @@
+<%= form_for @recipe do |f| %>
+ 
+ <%= f.label :name %>
+ <%= f.text_field :name %>
+
+ <% options = options_from_collection_for_select(@meals, :id, :name) %>
+ <%= f.select :meal_id, options %>
+
+ <%= f.label :key_ingrediant %>
+ <%= f.text_field :key_ingrediant %>
+
+ <%= f.label :method %>
+ <%= f.text_field :method, :size => 150 %>
+
+ <%= f.label :ingrediants %>
+ <%= f.text_field :ingrediants, :size => 150 %>
+
+ <%= f.submit 'Update Recipe!' %>
+<% end %>

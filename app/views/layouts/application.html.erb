@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RecipeBook</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+
+  <h1>The busy Dad's cookbook</h1>
+  <%= link_to "New Recipe", new_recipe_path, class: "btn" %>
+
+  <% @meals.each do |meal| %>
+    <%= link_to "#{meal.name.pluralize}", meal_path(meal), class: "btn" %>
+    
+    <br>
+  <% end %>
+
+  </header>
+
+<%= yield %>
+
+</body>
+</html>

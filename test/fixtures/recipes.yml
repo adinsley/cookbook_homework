@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  meal_id: 1
+  key_ingrediant: MyString
+  ingrediants: MyString
+  method: MyString
+
+two:
+  name: MyString
+  meal_id: 1
+  key_ingrediant: MyString
+  ingrediants: MyString
+  method: MyString

@@ -1,0 +1,11 @@
+<h1><%= @recipe.name %></h1>
+<p>Type: <%= @recipe.meal.name%></p>
+<p>Key Ingrediant: <%= @recipe.key_ingrediant %></p>
+<p>Method: <%= @recipe.method %></p>
+<p>Ingrediants: <%= @recipe.ingrediants %></p>
+
+
+
+
+<%= link_to "Edit Recipe", edit_recipe_path(@recipe), class: "btn" %>
+

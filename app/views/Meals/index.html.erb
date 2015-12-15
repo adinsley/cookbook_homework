@@ -1,0 +1,7 @@
+
+<% @meals.each do |meal| %>
+  <h2><%= meal.name %></h2>
+  <%= link_to "Go to #{meal.name.pluralize}", meal_path(meal), class: "btn" %>
+  
+  <br>
+<% end %>
