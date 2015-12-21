@@ -1,7 +1,11 @@
 class RecipesController < ApplicationController
   
   def index
-    @recipes = Recipe.all
+    if params[:search]
+      @recipes = Recipe.search(params[:search])
+    else
+      @recipes = Recipe.all
+    end
   end
 
   def show
@@ -27,6 +31,8 @@ class RecipesController < ApplicationController
     Recipe.find(params[:id]).update(recipe_params)
     redirect_to recipes_path
   end
+
+
 
   private
 
