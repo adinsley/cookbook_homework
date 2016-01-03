@@ -1,7 +1,15 @@
 
-<% @meals.each do |meal| %>
-  <h2><%= meal.name %></h2>
-  <%= link_to "Go to #{meal.name.pluralize}", meal_path(meal), class: "btn" %>
-  
-  <br>
+<% @meals.in_groups_of(2,false).each do |group| %>
+  <div class="row">
+    <% group.each do |meal| %>
+      <div class= "col-md-6">
+        <h2><%= meal.name %></h2>
+        <%= link_to "Go to #{meal.name.pluralize}", meal_path(meal), class: "btn" %>
+      </div>
+    <% end %>
+  </div>
 <% end %>
+
+
+
+

@@ -1,15 +1,87 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
+
+html,
+body {
+  margin-top: -20px;
+  border: 0px;
+  padding: 0px;
+/*css for full size background image*/
+  background: url(http://www.secureteen.com/uploads/2013/10/single-dad-cooking.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  backg*/round-size: cover;
+  
+  height: 100%;
+  background-color: #060;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+ }
+
+ header {
+  background:rgba(255,255,255,0.5);
+  color: red;
+ }
+
+ #logo {
+    color: red;
+    text-shadow: 0px 0px 0px #2f6627;
+ }
+
+ header .btn {
+  color: red;
+
+ }
+
+ .navbar {
+  padding-bottom: 20px;
+ }
+
+ .search {
+  -moz-box-shadow: 0px 0px 0px 0px #3dc21b;
+  -webkit-box-shadow: 0px 0px 0px 0px #3dc21b;
+  box-shadow: 0px 0px 0px 0px #3dc21b;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #44c767), color-stop(1, #5cbf2a));
+  background:-moz-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+  background:-webkit-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+  background:-o-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+  background:-ms-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+  background:linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#44c767', endColorstr='#5cbf2a',GradientType=0);
+  background-color:#44c767;
+  -moz-border-radius:26px;
+  -webkit-border-radius:26px;
+  border-radius:25px;
+  border:1px solid #1de030;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:1px 1px;
+  text-decoration:none;
+  text-shadow:0px 0px 0px #2f6627;
+ }
+ .search:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5cbf2a), color-stop(1, #44c767));
+  background:-moz-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+  background:-webkit-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+  background:-o-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+  background:-ms-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+  background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cbf2a', endColorstr='#44c767',GradientType=0);
+  background-color:#5cbf2a;
+ }
+ .search:active {
+  position:relative;
+  top:1px;
+ }
+
+.input-append {
+
+
+}
+
+      
+ 

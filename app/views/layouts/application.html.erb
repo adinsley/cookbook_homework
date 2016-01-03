@@ -3,13 +3,16 @@
 <head>
   <title>RecipeBook</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <header>
-  <h1>The Busy Dad's cookbook</h1>
+  <h1 id="logo">The Busy Dad's cookbook</h1>
   <%= link_to "New Recipe", new_recipe_path, class: "btn" %>
+  <%= link_to "Home", root_path, class: "btn" %>
 <ul>
   
   <%= link_to "Starters", meal_path(1), class: "btn" %>
@@ -26,10 +29,12 @@
       <%= text_field_tag :search, params[:search], class: "span2", placeholder: "Search Recipes" %>
       <!-- In order to have the "search" icon int the button, we need to use plain HTML instead 
            of using a Rails form helper -->
-      <button class="btn" type="submit"><i class="icon-search"></i></button>
+      <button class="search" type="submit">Go!</button>
     <%end%>
 </div>
   </header>
+
+
 
 <%= yield %>
 
