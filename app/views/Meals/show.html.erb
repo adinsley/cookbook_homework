@@ -3,7 +3,7 @@
 <% @meal.recipes.each do |recipe| %>
   <h3>Name: <%= recipe.name %>
   <br>
-  Key Ingrediants: <%= recipe.key_ingrediant %></h3>
+  Key Ingredients: <%= recipe.key_ingrediant %></h3>
 
   <%= link_to "See #{recipe.name} details", recipe_path(recipe), class: "btn" %>
 

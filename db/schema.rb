@@ -11,13 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151214200836) do
+ActiveRecord::Schema.define(version: 20160104141009) do
+
+  create_table "ingredients", force: :cascade do |t|
+    t.string   "name"
+    t.string   "group"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "meals", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "quantities", force: :cascade do |t|
+    t.integer  "ingredient_id"
+    t.integer  "recipe_id"
+    t.string   "amount"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "quantities", ["ingredient_id"], name: "index_quantities_on_ingredient_id"
+  add_index "quantities", ["recipe_id"], name: "index_quantities_on_recipe_id"
 
   create_table "recipes", force: :cascade do |t|
     t.string   "name"

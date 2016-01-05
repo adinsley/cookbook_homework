@@ -15,11 +15,13 @@ class RecipesController < ApplicationController
   def new
     @recipe = Recipe.new
     @meals = Meal.all
+  
   end
 
   def create
     Recipe.create(recipe_params)
-    redirect_to recipes_path
+    Quantity.create(quantity_params)
+    # redirect_to new_quantity_path
   end
 
   def edit
@@ -39,5 +41,8 @@ class RecipesController < ApplicationController
   def recipe_params
     params.require(:recipe).permit(:name, :meal_id, :key_ingrediant, :method, :ingrediants)
   end
+
+
+
 
 end

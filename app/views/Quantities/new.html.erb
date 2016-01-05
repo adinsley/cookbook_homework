@@ -1,0 +1,19 @@
+<%= form_for @quantity do |f| %>
+
+
+
+<% options = options_from_collection_for_select(@recipes, :id, :name) %>
+<%= f.select :recipe_id, options %>
+
+<% options = options_from_collection_for_select(@ingredients, :id, :name) %>
+<%= f.select :ingredient_id, options %>
+
+
+<%= f.label :amount %>
+<%= f.text_field :amount %>
+
+
+
+
+<%= f.submit "Whatever" %>
+<% end %>
